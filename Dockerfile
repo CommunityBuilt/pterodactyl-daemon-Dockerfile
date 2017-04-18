@@ -6,7 +6,7 @@ WORKDIR /srv/daemon
 
 RUN apk update \
  && apk add openssl make gcc g++ python linux-headers paxctl gnupg tar \
- && wget -O daemon.tar.gz https://github.com/Pterodactyl/Daemon/archive/v0.4.0-beta.1.tar.gz \
+ && wget -O daemon.tar.gz https://github.com/Pterodactyl/Daemon/archive/v0.4.0-beta.1.1.tar.gz \
  && tar --strip-components=1 -xzvf daemon.tar.gz \
  && npm install --production \
  && apk del curl make gcc g++ python linux-headers paxctl gnupg tar ${DEL_PKGS} \
