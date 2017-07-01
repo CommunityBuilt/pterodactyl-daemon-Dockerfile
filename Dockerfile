@@ -6,7 +6,7 @@ WORKDIR /srv/daemon
 
 RUN apt-get update \
  && apt-get install unzip \
- && wget -O daemon.tar.gz https://github.com/Pterodactyl/Daemon/archive/v0.4.2.tar.gz \
+ && wget -O daemon.tar.gz https://github.com/Pterodactyl/Daemon/archive/v0.4.3.tar.gz \
  && tar --strip-components=1 -xzvf daemon.tar.gz \
  && npm install --production \
  && rm -rf /node-${VERSION}.tar.gz /SHASUMS256.txt.asc /node-${VERSION} ${RM_DIRS} \
